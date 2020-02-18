@@ -7,11 +7,9 @@ def run_guessing_game
   random = 1 + rand(6)
   input = gets.chomp
   
-  while input == random
+  if input.to_i == random
     puts "You guessed the correct number!"
-  end
-  
-  if input == "exit"
+  elsif input == "exit"
     puts "Goodbye!"
   else 
     puts "Sorry! The computer guessed #{random}."
